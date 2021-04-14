@@ -136,10 +136,8 @@ function offshare() {
 }
 
 // ---------------   Input from camera  -----------------------
-
-let snap = document.getElementById("snap-img");
-
-let canvas = document.getElementById("snap-canvas");
+var video;
+var snap = document.getElementById("snap-img");
 
 var front = false;
 
@@ -159,7 +157,7 @@ var constraints = {
 navigator.mediaDevices
   .getUserMedia(constraints)
   .then(function (mediaStream) {
-    var video = document.querySelector("#user-input-img");
+    video = document.querySelector("#user-input-img");
     video.srcObject = mediaStream;
     video.onloadedmetadata = function (e) {
       video.play();
@@ -168,3 +166,9 @@ navigator.mediaDevices
   .catch(function (err) {
     console.log(err.name + ": " + err.message);
   }); // always check for errors at the end.
+
+var canvas = document.getElementById("snap-canvas");
+var context = canvas.getContext("2d");
+snap.addEventListener("click", function () {
+  context.drawImage(video, 0, 0, 400, 400);
+});
