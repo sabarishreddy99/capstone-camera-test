@@ -1,0 +1,934 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #efeeee;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #146783;
+}
+
+#loading {
+  position: absolute;
+  background-color: #efeeee;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  font-family: "Montserrat", sans-serif;
+  color: #383754;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 5;
+}
+
+#loading img {
+  height: 200px;
+}
+
+/* ------------------  Sweet Alert --------------------------------------- */
+
+.swal-text {
+  display: block;
+  text-align: center;
+}
+
+/* --------------------------------------  new year ---------------------------------- */
+#new-year {
+  position: absolute;
+  background-color: #efeeee;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  font-family: "Montserrat", sans-serif;
+  color: #383754;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 3;
+
+  /* wrapping the items (Additional) */
+  flex-wrap: wrap;
+  /* ------------ */
+}
+
+#new-year img {
+  height: 200px;
+}
+
+#new-year h2 {
+  font-family: "Pacifico", cursive;
+  color: #383754;
+  font-size: 40px;
+}
+
+#new-year button {
+  border-radius: 40px;
+  border-width: 4px;
+}
+
+/*------------------------- input, selected - focus & visited--------------------------- */
+input:focus,
+select:focus,
+textarea:focus {
+  background-color: #d4edf5;
+}
+
+/* --------------------------------------   Fixed tops    -------------------------------- */
+
+.share-section {
+  position: fixed;
+  display: inline-block;
+  right: 3.5%;
+  bottom: 2.5%;
+  z-index: 1;
+}
+
+.share-section-left {
+  position: fixed;
+  display: inline-block;
+  left: 3.5%;
+  bottom: 2.5%;
+  z-index: 1;
+}
+
+#overlayqr {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#overlayshare {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  cursor: pointer;
+  text-align: center;
+}
+
+#textqr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+#share-btn {
+  z-index: 2;
+}
+
+.share-content {
+  display: none;
+  background-color: #efeeee;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1;
+  min-width: 55px;
+  right: 3%;
+  bottom: 1.6%;
+  border-radius: 50px;
+  padding-bottom: 6px;
+}
+
+.brand-logo-fixedtops {
+  border-radius: 20%;
+  height: 50px;
+  background-color: rgb(173, 172, 172);
+}
+.share-content a {
+  display: block;
+  cursor: pointer;
+}
+
+.share-content a:hover {
+  background-color: rgb(226, 224, 224);
+}
+
+.share-content a i {
+  font-size: 30px;
+  padding: 8px;
+}
+
+.share-section:hover .share-content {
+  display: block;
+}
+
+.share-section button i {
+  font-size: 20px;
+}
+
+.share-section-left button i {
+  font-size: 20px;
+}
+
+#whatsapp {
+  color: #228b22;
+}
+
+#twitter {
+  color: #1e90ff;
+}
+
+#facebook {
+  color: #483d8b;
+}
+
+#linkedin {
+  color: #191970;
+}
+
+.go-to-top {
+  position: fixed;
+  left: 48%;
+  bottom: 1%;
+  z-index: 1;
+}
+
+.go-to-top i {
+  font-size: 22px;
+  cursor: pointer;
+  background: #efeeee;
+  padding: 4px;
+  border-radius: 10px;
+  border: 2px dotted grey;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.fixed-tops button {
+  border-radius: 50%;
+  border-width: 4px;
+}
+
+/* ------------------------------------------   SECTION-1  --------------------------------------- */
+#section1 {
+  background-color: #caddf7;
+
+  transform: skewY(-20deg);
+  margin-top: -300px;
+}
+
+#section1 .intro-content {
+  transform: skewY(+20deg);
+  padding-top: 300px;
+  position: relative;
+}
+
+.navigation {
+  padding: 12px 9px;
+}
+
+.navbar-brand {
+  font-family: "Pacifico", cursive;
+  color: #383754;
+  font-size: 40px;
+}
+
+.brand-logo {
+  height: 60px;
+  width: 60px;
+  margin-right: 3px;
+}
+
+#navbarNav {
+  font-family: "Montserrat", sans-serif;
+  color: #383754;
+  font-weight: bold;
+}
+
+#navbarNav ul li:hover {
+  border-bottom: solid 2px grey;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  padding-top: 270px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 5px;
+  text-decoration: none;
+  font-size: 31px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.closebtn {
+  position: absolute;
+  top: 350px;
+  left: 84%;
+}
+
+.intro-text {
+  font-family: "Fira Sans", sans-serif;
+  /* font-weight: bolder; */
+  padding: 2% 0 0 8%;
+  color: #1d1c2e;
+}
+.intro-txt-line-2 {
+  color: #52525f;
+  font-family: "Montserrat", sans-serif;
+}
+.intro-text h1 a {
+  color: #1d1c2e;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.intro-img {
+  height: 250px;
+  padding-right: 30px;
+}
+
+.intro-img-div {
+  text-align: right;
+}
+
+.add2home {
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  color: #383754;
+  bottom: 50px;
+}
+.add2home button {
+  margin: 5px;
+  border-radius: 60px;
+  display: inline;
+}
+
+.twinbtns-mob {
+  display: none;
+}
+
+.twinbtns-pc {
+  display: block;
+}
+/* ----------------------------------------   SECTION-2   -------------------------------------- */
+
+/* -----------------------------------    SECTION - 3   --------------------------------------- */
+
+.section3,
+.section4 {
+  position: relative;
+}
+
+.section3 {
+  margin-top: 300px;
+}
+.img-input-sec {
+  background-color: #efeeee;
+  border-radius: 15px;
+  border: solid 1px rgb(207, 206, 206);
+  /* box-shadow: 10px 10px 16px -2px #ccc, -10px -10px 16px -2px #fff; */
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+}
+
+.upload-img-div {
+  text-align: right;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+.upload-img {
+  height: 200px;
+}
+
+.img-input-sec h2 {
+  font-family: "Fira Sans", sans-serif;
+  color: #383754;
+  font-weight: bold;
+  text-align: center;
+}
+
+.img-input-sec button {
+  margin: 20px;
+  border-radius: 40px;
+}
+
+.exp-btns-add {
+  position: absolute;
+  bottom: 3%;
+  right: 1%;
+}
+.exp-btns-add a {
+  margin-left: 5px;
+}
+
+.fa-whatsapp:hover {
+  color: rgb(24, 173, 24);
+}
+
+/* ------------------------------------SECTION-4------------------------------------------------ */
+
+.feedback-sec {
+  background-color: #efeeee;
+  border-radius: 15px;
+  border: solid 1px rgb(207, 206, 206);
+  /* box-shadow: 10px 10px 16px -2px #ccc, -10px -10px 16px -2px #fff; */
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+}
+
+.feedback-img {
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  width: 400px;
+  height: 400px;
+}
+
+.improve-img {
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  width: 200px;
+  height: 200px;
+}
+.feedback-appreciation {
+  position: absolute;
+  top: 40%;
+  left: 2%;
+  font-family: "Montserrat", sans-serif;
+  color: #50505e;
+}
+
+.feedback-sec-txt {
+  position: relative;
+}
+
+.feedback-sec-txt h2 {
+  font-family: "Fira Sans", sans-serif;
+  color: #383754;
+  font-weight: bold;
+  text-align: center;
+}
+
+.feedback-sec-txt h6 {
+  font-family: "Montserrat", sans-serif;
+  color: #6f6f72;
+  text-align: center;
+  font-weight: bold;
+}
+
+.thumbs-btn {
+  text-align: center;
+}
+.thumbs-btn button {
+  border-radius: 50%;
+  box-shadow: 10px 10px 16px -2px #ccc, -10px -10px 16px -2px #fff;
+  margin: 10px 50px;
+}
+
+.feedback-sec-txt input {
+  width: 250px;
+  border: solid 0.1px rgb(224, 224, 224);
+  outline: none;
+  display: block;
+  border-radius: 50px;
+  text-align: center;
+  padding: 0.6em;
+  margin: 0 auto;
+  background: #efeeee;
+  -webkit-appearance: none;
+  -moz-box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
+  -webkit-box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
+  box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
+  margin-bottom: 1em;
+  color: rgb(58, 56, 56);
+}
+.feedback-sec-txt textarea {
+  width: 250px;
+  border: solid 0.1px rgb(224, 224, 224);
+  outline: none;
+  display: block;
+  border-radius: 15px;
+  text-align: center;
+  padding: 0.6em;
+  margin: 0 auto;
+  background: #efeeee;
+  -webkit-appearance: none;
+  -moz-box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
+  -webkit-box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
+  box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
+  margin-bottom: 1em;
+  color: rgb(58, 56, 56);
+}
+
+.feedback-send {
+  text-align: right;
+}
+
+.feedback-send button {
+  border-radius: 40px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  background-color: #d4edf5;
+}
+/* --------------------------------------------    FOOTER-SECTION ------------------------------- */
+
+.footer-sec {
+  background-color: #383754;
+  font-family: "Montserrat", sans-serif;
+  color: #efeeee;
+  position: relative;
+}
+
+.foot-img {
+  margin: 35px 15px 35px 15px;
+  border: solid 3px #c2c0c0;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+}
+
+.foot-content {
+  position: absolute;
+  top: 18px;
+  left: 125px;
+}
+.foot-content h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+.foot-content p {
+  padding: 0;
+  margin: 0;
+  font-size: smaller;
+  color: #afadad;
+}
+
+.social-icons {
+  margin: 3px;
+  left: 5px;
+  font-size: x-large;
+  color: #dfdddd;
+  margin: 8px 16px 0 0;
+}
+
+.social-icons:hover {
+  color: #83d8f5;
+}
+
+.winner-img {
+  height: 170px;
+  width: 170px;
+  position: absolute;
+  top: 0px;
+  right: 43.5%;
+}
+
+.devices-img {
+  height: 150px;
+  width: 170px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.foot-logo-txt {
+  position: absolute;
+}
+
+.winner-txt {
+  position: absolute;
+  font-family: "Pacifico", cursive;
+  color: #a0a0a0;
+  font-size: 21px;
+  bottom: 10px;
+  right: 44.6%;
+}
+
+.devices-txt {
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  color: #a0a0a0;
+  bottom: 20px;
+  right: 200px;
+}
+
+.indian {
+  position: absolute;
+  left: 20px;
+  bottom: 0px;
+  font-size: smaller;
+  color: #afadad;
+}
+/* ---------------------------------------------MOBILE---------------------------------------- */
+
+@media screen and (max-width: 500px) {
+  #loading img {
+    height: 150px;
+  }
+  /* --------------------------------  fixed tops ----------------------------------------------- */
+
+  /* --------------------------------------SECTION-1-------------------------------------- */
+  .navbar-brand {
+    font-size: 30px;
+  }
+
+  .brand-logo {
+    display: none;
+  }
+
+  .intro-img {
+    height: 700px;
+    width: 700px;
+    position: absolute;
+    top: 350px;
+    margin-top: -70px;
+    z-index: -1;
+    padding-left: 15%;
+  }
+
+  .intro-text {
+    padding: 18% 20% 0 3%;
+    color: #1d1c2e;
+  }
+
+  .add2home {
+    font-family: "Montserrat", sans-serif;
+    color: #383754;
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+  .add2home button {
+    margin: 6px;
+    border-radius: 60px;
+    display: block;
+  }
+
+  .twinbtns-pc {
+    display: none;
+  }
+  .twinbtns-mob {
+    display: block;
+  }
+  /* ----------------------------------------   SECTION-2   ---------------------------------- */
+
+  /* -------------------------------------SECTION-3------------------------------------------- */
+
+  .explore-img {
+    padding-top: 70px;
+  }
+
+  .explore-sec h1 {
+    position: absolute;
+    font-family: "Pacifico", cursive;
+    color: #383754;
+    top: 3%;
+    left: 8.5%;
+    text-align: center;
+    transform: rotate(-12deg);
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  .exp-btns {
+    position: absolute;
+    top: 41%;
+    left: 1%;
+  }
+  .exp-btns button {
+    display: block;
+    margin: 10px 0 10px 3px;
+    border-radius: 40px;
+    width: 180px;
+  }
+
+  .exp-btns-add {
+    position: absolute;
+    bottom: 3%;
+    right: 4%;
+  }
+  /*---------------------------------FEEDBACK SECTION------------------------------------- */
+  .feedback-img,
+  .feedback-appreciation {
+    display: none;
+  }
+
+  .improve-img {
+    position: absolute;
+    bottom: 0.5%;
+    left: 0%;
+    width: 150px;
+    height: 100px;
+  }
+
+  /* ---------------------------------------FOOTER-SECTION---------------------------------- */
+
+  .foot-img {
+    margin: 30px 15px 82px 15px;
+    border: solid 2px #efeeee;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+  }
+
+  .winner-img,
+  .devices-txt,
+  .devices-img {
+    display: none;
+  }
+
+  .winner-txt {
+    position: absolute;
+    font-family: "Pacifico", cursive;
+    color: #a0a0a0;
+    font-size: 15px;
+    bottom: 7px;
+    right: 5px;
+  }
+
+  .indian {
+    position: absolute;
+    left: 18px;
+    bottom: 40px;
+    font-size: smaller;
+    color: #afadad;
+  }
+}
+/* ------------------------------------    TABLET     -------------------------------------------- */
+@media screen and (min-width: 500px) and (max-width: 750px) {
+  /* -----------------------------------SECTION -1 ------------------------------------------- */
+  .brand-logo {
+    display: none;
+  }
+
+  .intro-img {
+    height: 850px;
+    width: 850px;
+    position: absolute;
+    left: 30%;
+    top: 350px;
+    margin-top: -70px;
+    z-index: -1;
+  }
+
+  /* -----------------------------------SECTION-2-------------------------------------------- */
+
+  /* ----------------------------------------SECTION-3----------------------------------------- */
+
+  .explore-sec h1 {
+    top: 35%;
+    right: 2%;
+  }
+
+  .exp-btns {
+    position: absolute;
+    top: 32%;
+    left: 10%;
+  }
+  .exp-btns button {
+    display: block;
+    margin: 10px 0 10px 3px;
+    border-radius: 40px;
+    width: 200px;
+  }
+
+  .exp-btns-add {
+    position: absolute;
+    bottom: 3%;
+    right: 2.5%;
+  }
+
+  /*---------------------------------FEEDBACK SECTION------------------------------------- */
+  .feedback-img,
+  .feedback-appreciation {
+    display: none;
+  }
+
+  .improve-img {
+    position: absolute;
+    bottom: 0.5%;
+    left: 0%;
+    width: 150px;
+    height: 100px;
+  }
+  /* ------------------------------------------ FOOTER-SECTION  ----------------------------- */
+  .winner-img {
+    height: 140px;
+    width: 140px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+  }
+
+  .winner-txt {
+    position: absolute;
+    font-family: "Pacifico", cursive;
+    color: #a0a0a0;
+    font-size: 25px;
+    bottom: 15px;
+    right: 6px;
+  }
+  .devices-img {
+    display: none;
+  }
+
+  .devices-txt {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+  /* -----------------------------------SECTION -1 ------------------------------------------- */
+  .intro-img {
+    height: 850px;
+    width: 850px;
+    position: absolute;
+    left: 30%;
+    top: 350px;
+    margin-top: -70px;
+    z-index: -1;
+  }
+
+  /* -----------------------------------SECTION-2-------------------------------------------- */
+
+  /* ----------------------------------------SECTION-3----------------------------------------- */
+
+  .explore-sec h1 {
+    top: 35%;
+    right: 2%;
+  }
+
+  .exp-btns {
+    position: absolute;
+    top: 32%;
+    left: 10%;
+  }
+  .exp-btns button {
+    display: block;
+    margin: 10px 0 10px 3px;
+    border-radius: 40px;
+    width: 200px;
+  }
+
+  .exp-btns-add {
+    position: absolute;
+    bottom: 3%;
+    right: 2.5%;
+  }
+
+  /* --------------------------------------------FEEDBACK-SECTION------------------------------- */
+  .feedback-img {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    width: 230px;
+    height: 230px;
+  }
+  .feedback-appreciation {
+    position: absolute;
+    top: 40%;
+    left: 1%;
+    font-family: "Montserrat", sans-serif;
+    color: #50505e;
+    font-size: 23px;
+  }
+
+  /* ------------------------------------------ FOOTER-SECTION  ----------------------------- */
+  .winner-img {
+    height: 140px;
+    width: 140px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+  }
+
+  .winner-txt {
+    position: absolute;
+    font-family: "Pacifico", cursive;
+    color: #a0a0a0;
+    font-size: 25px;
+    bottom: 15px;
+    right: 6px;
+  }
+  .devices-img {
+    display: none;
+  }
+
+  .devices-txt {
+    display: none;
+  }
+}
