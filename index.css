@@ -393,6 +393,12 @@ a:hover {
   text-align: center;
 }
 
+.camera-upload,
+.custom-upload {
+  background-color: #e6e1e1;
+  border-radius: 15px;
+}
+
 .custom-upload {
   text-align: center;
 }

@@ -220,44 +220,46 @@
             sinline
           ></video>
 
-          <canvas id="snap-canvas" width="292" height="292"></canvas>
+          <div class="upload-btn-div">
+            <button
+              id="snap-img"
+              class="btn btn-outline-dark btn-lg btn-md btn-sm"
+              title="Capture Image"
+            >
+              Capture <i class="fas fa-camera"></i>
+            </button>
+
+            <button
+              id="flip-button"
+              class="btn btn-outline-dark btn-lg btn-lg btn-md btn-sm"
+              title="Flip Camera"
+              onclick="flipcamera()"
+            >
+              Flip Camera <i class="fas fa-sync-alt"></i>
+            </button>
+          </div>
         </div>
 
-        <div class="upload-btn-div">
-          <button
-            id="snap-img"
-            class="btn btn-outline-dark btn-lg btn-md btn-sm"
-            title="Capture Image"
-          >
-            Capture <i class="fas fa-camera"></i>
-          </button>
-
-          <button
-            id="flip-button"
-            class="btn btn-outline-dark btn-lg btn-lg btn-md btn-sm"
-            title="Flip Camera"
-            onclick="flipcamera()"
-          >
-            Flip Camera <i class="fas fa-sync-alt"></i>
-          </button>
-
-          <button
-            id="upload-img"
-            class="btn btn-dark btn-lg btn-md btn-sm"
-            title="Upload Image"
-            onclick=""
-          >
-            Upload Image <i class="fas fa-upload"></i>
-          </button>
+        <div class="video-canvas camera-upload">
+          <canvas id="snap-canvas" width="292" height="292"></canvas>
+          <div>
+            <button
+              id="upload-img"
+              class="btn btn-dark btn-lg btn-md btn-sm"
+              title="Upload Image"
+              onclick=""
+            >
+              Upload Image <i class="fas fa-upload"></i>
+            </button>
+          </div>
         </div>
 
         <br />
 
         <h2>OR</h2>
 
-        <br />
-
         <div class="custom-upload">
+          <br />
           <form action="">
             <label for="myfile"><h4>Choose an image:</h4></label>
             <input
