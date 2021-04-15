@@ -124,7 +124,7 @@ function offshare() {
 var video;
 var snap = document.getElementById("snap-img");
 
-var front = false;
+var front = true;
 
 function flipcamera() {
   front = !front;
@@ -135,13 +135,15 @@ var constraints = {
   video: {
     width: 300,
     height: 300,
+    facingMode: {
+      exact: front ? "user" : "environment",
+    },
   },
 };
 
 navigator.mediaDevices
   .getUserMedia(constraints)
   .then(function (mediaStream) {
-    constraints.video = { facingMode: front ? "user" : "environment" };
     video = document.querySelector("#user-input-img");
     video.srcObject = mediaStream;
     video.onloadedmetadata = function (e) {
