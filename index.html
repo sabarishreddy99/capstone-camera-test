@@ -6,6 +6,7 @@
     <title>Audible image Captioning</title>
 
     <link rel="icon" href="title-img.svg" type="image/gif" />
+
     <meta name="author" content="Sabarish Reddy Remala" />
 
     <meta name="keywords" content="" />
@@ -65,290 +66,167 @@
     <!-- ---------------------- social links , loading & custom pop up   --------------------- -->
 
     <div id="loading">
-      <img src="loading.svg" alt="gradevitian" />
-      <h3>gradevitian.in</h3>
+      <img src="loading.svg" alt="Loading" />
+      <h3>Audible Image Captioner</h3>
     </div>
 
-    <div id="new-year" class="newyear">
-      <h3>gradeVITian</h3>
-      <h6>is now compatible with all devices.</h6>
-      <h2>Happy Learning!</h2>
-
-      <img src="add2homescreen-img.svg" alt="Add to homescreen" />
-      <br />
-      <h6>You can now</h6>
-      <h5>Add it to Home Screen.</h5>
-
-      <button
-        class="btn btn-dark btn-sm"
-        id="new-year-close"
-        type="button"
-        title="Let's compute GPA, CGPA, Grades and Attendance."
-        onclick="closenewyear()"
-      >
-        <b>Dive In</b> <i class="fas fa-arrow-alt-circle-right"></i>
-      </button>
+    <!-- ----------------------------FIXED tops---------------------------------------------- -->
+    <div class="fixed-tops">
+      <div class="go-to-top">
+        <i
+          title="Go to top"
+          onclick="topFunction()"
+          class="fas fa-angle-double-up topsy"
+        ></i>
+      </div>
     </div>
 
-    <!-- ---------------------------------------  POP UP END  ---------------------------------- -->
+    <!-- section1 -->
 
-    <!-- Total blur except pop up -->
-    <div id="pop-up-blur">
-      <!-- ----------------------------FIXED tops---------------------------------------------- -->
+    <section id="section1">
+      <div class="intro-content">
+        <!-- navigation bar -->
+        <div class="navigation">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"
+                ><img
+                  class="brand-logo"
+                  src="title-img.svg"
+                  alt="logo"
+                />Audible Image Captioning</a
+              >
+              <button class="navbar-toggler" type="button" onclick="openNav()">
+                <i class="fas fa-ellipsis-h fa-2x"></i>
+              </button>
 
-      <div class="fixed-tops">
-        <div class="go-to-top">
-          <i
-            title="Go to top"
-            onclick="topFunction()"
-            class="fas fa-angle-double-up topsy"
-          ></i>
+              <div id="myNav" class="overlay">
+                <a
+                  href="javascript:void(0)"
+                  class="closebtn"
+                  onclick="closeNav()"
+                  ><i class="fas fa-times fa-1.5x"></i
+                ></a>
+                <div class="overlay-content">
+                  <a href="#upload-img-id">Image Upload</a>
+                  <a href="#img-captioning-id">Captioning</a>
+                  <a href="#">Audio</a>
+                  <a href="#">Github</a>
+                  <a href="#">Resources</a>
+                  <a href="#about-us">About Us</a>
+                </div>
+              </div>
+
+              <div
+                class="collapse navbar-collapse justify-content-end"
+                id="navbarNav"
+              >
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      style="color: #383754"
+                      href="#upload-img-id"
+                      >Image Upload</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="img-captioning-id">Captioning</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Audio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Github</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Resources</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about-us">About Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         </div>
 
-        <div id="overlayqr" onclick="off()">
-          <div id="textqr">
-            <img class="brand-logo-fixedtops" src="brand-logo.svg" alt="logo" />
-            <h6>Scan here to visit</h6>
-            <h4>gradevitian.in</h4>
-            <img src="gradevitian_QR.svg" alt="Gradevitian QR code" />
+        <div class="intro-text">
+          <h1>Hi there!</h1>
+          <h1 class="intro-txt-line-2">
+            I'll help you in captioning the image with
+          </h1>
+          <h1>
+            <a
+              href=""
+              class="typewrite"
+              data-period="2000"
+              data-type='[ "Text & Audio."]'
+            >
+              <span class="wrap"></span>
+            </a>
+          </h1>
+
+          <div class="intro-img-div">
+            <img class="intro-img" src="intro-img.svg" alt="Image Captioning" />
           </div>
-        </div>
 
-        <div class="share-section-left">
-          <button
-            type="button"
-            id="share-btn-left"
-            title="Go to top"
-            class="btn btn-secondary btn-sm"
-            onclick="on()"
-          >
-            <i class="fas fa-qrcode"></i>
-          </button>
-        </div>
+          <div class="add2home">
+            <h4>Add to home screen</h4>
 
-        <div class="share-section">
-          <button
-            type="button"
-            id="share-btn"
-            title="Go to top"
-            class="btn btn-secondary btn-sm"
-            onclick="onshare()"
-          >
-            <i class="fas fa-share-alt"></i>
-          </button>
-
-          <div id="overlayshare" onclick="offshare()">
-            <!-- SHARE CONTENT -->
-            <div class="share-content" onclick="offshare()">
-              <a
-                id="whatsapp"
-                title="Whatsapp"
-                href="https://wa.me/?text=https://gradevitian.in/"
-                target="_blank"
-                ><i class="fab fa-whatsapp fa-2x"></i
-              ></a>
-
-              <a
-                id="linkedin"
-                title="Linked in"
-                href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgradevitian.in%2F"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin-in fa-2x"></i>
-              </a>
-
-              <a
-                id="twitter"
-                title="twitter"
-                href="https://twitter.com/intent/tweet?text=https://gradevitian.in/"
-                target="_blank"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-
-              <a
-                id="facebook"
-                title="Facebook"
-                target="_blank"
-                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgradevitian.in%2F&amp;src=sdkpreparse"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-
-              <a
-                data-toggle="tooltip"
-                data-placement="right"
-                title="Copy Link"
-                id="copy-text-btn"
-                ><i class="far fa-clipboard"></i
-              ></a>
-              <p id="clip-text" style="display: none">
-                https://gradevitian.in/
-              </p>
-
+            <div class="twinbtns-pc">
               <button
                 type="button"
-                class="btn btn-secondary btn-sm"
-                onclick="offshare()"
+                class="btn btn-outline-dark btn-lg"
+                id="btn1pc"
               >
-                <i class="fas fa-share-alt"></i>
+                <i class="fab fa-windows"></i> Windows
+              </button>
+              <button type="button" class="btn btn-dark btn-lg" id="btn2pc">
+                <i class="fab fa-android"></i> Android
               </button>
             </div>
-            <!-- SHARE CONTENT END -->
+
+            <div class="twinbtns-mob">
+              <button
+                type="button"
+                class="btn btn-outline-dark btn-md"
+                id="btn1mob"
+              >
+                <i class="fab fa-windows"></i> Windows
+              </button>
+              <button type="button" class="btn btn-dark btn-md" id="btn2mob">
+                <i class="fab fa-android"></i> Android
+              </button>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- section1 -->
+    <!-- ------------- UPLOAD IMAGE ----------------------------- -->
+    <section class="section2" id="upload-img-id">
+      <div class="img-input-sec">
+        <h2>Upload/Capture your image.</h2>
 
-      <section id="section1">
-        <div class="intro-content">
-          <!-- navigation bar -->
-          <div class="navigation">
-            <nav class="navbar navbar-expand-lg navbar-light">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"
-                  ><img
-                    class="brand-logo"
-                    src="title-img.svg"
-                    alt="logo"
-                  />Audible Image Captioning</a
-                >
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  onclick="openNav()"
-                >
-                  <i class="fas fa-ellipsis-h fa-2x"></i>
-                </button>
+        <img class="upload-img" src="upload-img.svg" alt="Upload Img" />
 
-                <div id="myNav" class="overlay">
-                  <a
-                    href="javascript:void(0)"
-                    class="closebtn"
-                    onclick="closeNav()"
-                    ><i class="fas fa-times fa-1.5x"></i
-                  ></a>
-                  <div class="overlay-content">
-                    <a href="GPA Calculator.html">GPA Calculator</a>
-                    <a style="color: white" href="index.html"
-                      >CGPA Calculator</a
-                    >
-                    <a href="Grade Predictor.html">Grade Predictor</a>
-                    <a href="CGPA Estimator.html">CGPA Estimator</a>
-                    <a href="Attendance Calculator.html"
-                      >Attendance Calculator</a
-                    >
-                    <a href="#explore-id">Explore</a>
-                  </div>
-                </div>
+        <div class="video-canvas">
+          <video
+            id="user-input-img"
+            width="300"
+            height="300"
+            autoplay
+            sinline
+          ></video>
 
-                <div
-                  class="collapse navbar-collapse justify-content-end"
-                  id="navbarNav"
-                >
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        style="color: #383754"
-                        href="index.html"
-                        >Img Upload</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="GPA Calculator.html"
-                        >Captioning</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="Grade Predictor.html">Audio</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="CGPA Estimator.html">Github</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="Attendance Calculator.html"
-                        >Resources</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#explore-id">About Us</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </div>
-
-          <div class="intro-text">
-            <h1>Hi there!</h1>
-            <h1 class="intro-txt-line-2">
-              I'll help you in captioning the image with
-            </h1>
-            <h1>
-              <a
-                href=""
-                class="typewrite"
-                data-period="2000"
-                data-type='[ "Text & Audio."]'
-              >
-                <span class="wrap"></span>
-              </a>
-            </h1>
-
-            <div class="intro-img-div">
-              <img
-                class="intro-img"
-                src="intro-img.svg"
-                alt="Image Captioning"
-              />
-            </div>
-
-            <div class="add2home">
-              <h4>Add to home screen</h4>
-
-              <div class="twinbtns-pc">
-                <button
-                  type="button"
-                  class="btn btn-outline-dark btn-lg"
-                  id="btn1pc"
-                >
-                  <i class="fab fa-windows"></i> Windows
-                </button>
-                <button type="button" class="btn btn-dark btn-lg" id="btn2pc">
-                  <i class="fab fa-android"></i> Android
-                </button>
-              </div>
-
-              <div class="twinbtns-mob">
-                <button
-                  type="button"
-                  class="btn btn-outline-dark btn-md"
-                  id="btn1mob"
-                >
-                  <i class="fab fa-windows"></i> Windows
-                </button>
-                <button type="button" class="btn btn-dark btn-md" id="btn2mob">
-                  <i class="fab fa-android"></i> Android
-                </button>
-              </div>
-            </div>
-          </div>
+          <canvas id="snap-canvas" width="292" height="292"></canvas>
         </div>
-      </section>
 
-      <section class="section3" id="explore-id">
-        <div class="img-input-sec">
-          <h2>Upload/Capture your image.</h2>
-
-          <div class="upload-img-div">
-            <img class="upload-img" src="upload-img.svg" alt="Upload Img" />
-          </div>
-
-          <video id="user-input-img" autoplay sinline></video>
+        <div class="upload-btn-div">
           <button
             id="snap-img"
-            class="btn btn-dark btn-lg"
+            class="btn btn-outline-dark btn-lg btn-md btn-sm"
             title="Capture Image"
           >
             Capture <i class="fas fa-camera"></i>
@@ -356,176 +234,133 @@
 
           <button
             id="flip-button"
-            class="btn btn-dark btn-lg"
+            class="btn btn-outline-dark btn-lg btn-lg btn-md btn-sm"
             title="Flip Camera"
             onclick="flipcamera()"
           >
             Flip Camera <i class="fas fa-sync-alt"></i>
           </button>
 
-          <canvas id="snap-canvas" width="400" height="400"></canvas>
-
-          <br />
-          <br />
-          <br />
-
-          <div class="exp-btns-add">
-            <a href="https://wa.me/?text=https://gradevitian.in/"
-              ><i class="fab fa-whatsapp fa-2x"></i
-            ></a>
-
-            <a
-              href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgradevitian.in%2F"
-            >
-              <i class="fab fa-linkedin-in fa-2x"></i>
-            </a>
-          </div>
+          <button
+            id="upload-img"
+            class="btn btn-dark btn-lg btn-md btn-sm"
+            title="Upload Image"
+            onclick=""
+          >
+            Upload Image <i class="fas fa-upload"></i>
+          </button>
         </div>
-      </section>
 
-      <!-- FEEDBACK -->
+        <br />
 
-      <section class="section4">
-        <div class="feedback-sec">
-          <img class="feedback-img" src="feedback.svg" alt="REVIEWS" />
-          <img class="improve-img" src="improve.svg" alt="Improve" />
-          <h1 class="feedback-appreciation">
-            Your Feedback is <br />highly appreciated!
-          </h1>
+        <h2>OR</h2>
 
-          <div class="feedback-sec-txt">
-            <h2>Help us improve.</h2>
-            <h6>Was this helpful?</h6>
+        <br />
 
-            <div>
-              <form
-                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScU5sLk7MvefZpVwBOzL4essV7cU8zUlIvuystDjRBqyjeD5g/formResponse"
-                method="post"
-                target="hidden_iframe"
-                onsubmit="validatedetails()"
-              >
-                <div class="thumbs-btn">
-                  <button
-                    type="button"
-                    class="btn btn-lg"
-                    title="Yes"
-                    id="yes"
-                    onclick="yes1()"
-                  >
-                    <i class="fas fa-thumbs-up"></i>
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-lg"
-                    title="No"
-                    id="no"
-                    onclick="no1()"
-                  >
-                    <i class="fas fa-thumbs-down"></i>
-                  </button>
-
-                  <input
-                    type="hidden"
-                    id="helpful"
-                    name="entry.1222579797"
-                    value=""
-                  />
-                </div>
-
-                <div>
-                  <h6>Name :</h6>
-                  <input
-                    type="text"
-                    id="Name"
-                    name="entry.946033457"
-                    placeholder="Your good name..."
-                    value=""
-                  />
-                </div>
-
-                <div>
-                  <h6>Your message :</h6>
-
-                  <textarea
-                    rows="5"
-                    id="Message"
-                    name="entry.1814573274"
-                    placeholder="Your suggestions..."
-                    value=""
-                  ></textarea>
-                </div>
-
-                <div class="feedback-send">
-                  <button
-                    type="submit"
-                    class="btn btn-dark btn-lg"
-                    title="Send Feedback"
-                    id="send"
-                    onclick="sendfeedback()"
-                  >
-                    Send <i class="far fa-paper-plane"></i>
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Ads by Google -->
-
-      <footer class="footer-sec">
-        <img class="foot-img" src="sabari-avtar.jpg" alt="Sabarish Reddy RJ" />
-        <p class="indian">Proud Indian!</p>
-
-        <div class="foot-content">
-          <p>Designed by</p>
-          <h6>Sabarish Reddy R J</h6>
-          <p>Electrical and Electronics Engineering.</p>
-          <p>
-            VIT '21, <a href="https://vit.ac.in/">vellore</a>.
-            <i class="far fa-copyright"></i> 2021
-          </p>
-          <p>
-            <a href="mailto:sabarirjsr@gmail.com"
-              ><i class="fas fa-envelope mail-icon"></i> sabarirjsr@gmail.com</a
+        <div class="custom-upload">
+          <form action="">
+            <label for="myfile"><h4>Choose an image:</h4></label>
+            <input
+              type="file"
+              id="myfile"
+              name="myfile"
+              accept="image/png, image/jpeg"
+            /><br /><br />
+            <button
+              type="submit"
+              class="btn btn-dark btn-lg btn-md btn-sm"
+              title="Upload Image"
+              id=""
+              onclick=""
             >
-          </p>
-          <p>
-            Made with <b><i class="fas fa-heart"></i></b> to all <b>#VITians</b>
-          </p>
+              Upload Image <i class="fas fa-upload"></i>
+            </button>
+          </form>
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="upload-btns-add">
+          <a href="https://wa.me/?text=https://gradevitian.in/"
+            ><i class="fab fa-whatsapp fa-2x"></i
+          ></a>
 
           <a
-            href="https://www.youtube.com/channel/UCjvTrInXpvuMbBg4aEbkeQQ?view_as=subscriber"
-            ><i class="fab fa-youtube social-icons"></i
-          ></a>
-
-          <a href="https://linkedin.com/in/sabarishreddyrj"
-            ><i class="fab fa-linkedin-in social-icons"></i
-          ></a>
-
-          <a href="https://www.facebook.com/profile.php?id=100006556459387"
-            ><i class="fab fa-facebook-f social-icons"></i
-          ></a>
-
-          <a href="https://www.instagram.com/sabarish_reddi.rj/"
-            ><i class="fab fa-instagram social-icons"></i
-          ></a>
+            href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fgradevitian.in%2F"
+          >
+            <i class="fab fa-linkedin-in fa-2x"></i>
+          </a>
         </div>
+      </div>
+    </section>
 
-        <img src="winner.svg" class="winner-img" alt="gradevitian.in" />
-        <img src="devices.svg" class="devices-img" alt="Mobile-Tablet-PC" />
-        <h1 class="winner-txt">gradeVITian.in</h1>
-        <h3 class="devices-txt">
-          Compatible with <br />
-          all devices. <i class="fas fa-check-circle"></i>
-        </h3>
+    <!-- IMAGE CAPTIONING -->
 
-        <div class="foot-logo-txt"></div>
+    <section class="section3" id="img-captioning-id">
+      <div class="captioning-sec">
+        <div class="captioning-sec-txt">
+          <h2>Image Captioning.</h2>
+          <h6>Text / Audio</h6>
 
-        <div class="foot-icons"></div>
-      </footer>
-    </div>
+          <div></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-sec" id="about-us">
+      <div class="foot-content">
+        <h6>Project by</h6>
+        <p>Chitroju K S A R S Narayana Charyulu - 17BEE0191</p>
+        <p>Remala Jaya Sabarish Reddy - 17BEE0274</p>
+        <p>Peta Rohith - 17BEE0271</p>
+        <p>Electrical and Electronics Engineering.</p>
+        <p>School: SELECT</p>
+        <p>
+          VIT '21, <a href="https://vit.ac.in/">vellore</a>.
+          <i class="far fa-copyright"></i> 2021
+        </p>
+
+        <a href=""><i class="fab fa-github social-icons"></i></a>
+
+        <!-- <a href="https://linkedin.com/in/sabarishreddyrj"
+          ><i class="fab fa-linkedin-in social-icons"></i
+        ></a>
+
+        <a href="https://www.facebook.com/profile.php?id=100006556459387"
+          ><i class="fab fa-facebook-f social-icons"></i
+        ></a>
+
+        <a href="https://www.instagram.com/sabarish_reddi.rj/"
+          ><i class="fab fa-instagram social-icons"></i
+        ></a> -->
+
+        <div class="guide-txt">
+          <br />
+          <h6>Under the guidance of</h6>
+          <p><i class="fas fa-user-tie"></i> Prof. Thirumalaivasan R.</p>
+          <p>
+            <a href="mailto:thirumalai.r@vit.ac.in"
+              ><i class="fas fa-envelope mail-icon"></i>
+              thirumalai.r@vit.ac.in</a
+            >
+          </p>
+          <p>School: SELECT</p>
+        </div>
+      </div>
+
+      <div class="capstone-txt">
+        <h2>Capstone Project</h2>
+        <h2>2017 - 2021. <i class="fas fa-check-circle"></i></h2>
+      </div>
+
+      <div class="vit-logo">
+        <img class="vit-img" src="vit-img.png" alt="VIT LOGO" />
+      </div>
+
+      <div style="background-color: black; height: 4px"></div>
+    </footer>
 
     <script>
       // ------------------------------- copy-clip board--------------------------------

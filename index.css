@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
 html,
 body {
   margin: 0;
@@ -49,57 +50,6 @@ a:hover {
 
 #loading img {
   height: 200px;
-}
-
-/* ------------------  Sweet Alert --------------------------------------- */
-
-.swal-text {
-  display: block;
-  text-align: center;
-}
-
-/* --------------------------------------  new year ---------------------------------- */
-#new-year {
-  position: absolute;
-  background-color: #efeeee;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  font-family: "Montserrat", sans-serif;
-  color: #383754;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 3;
-
-  /* wrapping the items (Additional) */
-  flex-wrap: wrap;
-  /* ------------ */
-}
-
-#new-year img {
-  height: 200px;
-}
-
-#new-year h2 {
-  font-family: "Pacifico", cursive;
-  color: #383754;
-  font-size: 40px;
-}
-
-#new-year button {
-  border-radius: 40px;
-  border-width: 4px;
-}
-
-/*------------------------- input, selected - focus & visited--------------------------- */
-input:focus,
-select:focus,
-textarea:focus {
-  background-color: #d4edf5;
 }
 
 /* --------------------------------------   Fixed tops    -------------------------------- */
@@ -228,18 +178,18 @@ textarea:focus {
 
 .go-to-top {
   position: fixed;
-  left: 48%;
-  bottom: 1%;
+  right: 3%;
+  bottom: 2%;
   z-index: 1;
 }
 
 .go-to-top i {
-  font-size: 22px;
+  font-size: 25px;
   cursor: pointer;
   background: #efeeee;
   padding: 4px;
   border-radius: 10px;
-  border: 2px dotted grey;
+  border: 2px solid rgb(36, 35, 35);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -267,7 +217,7 @@ textarea:focus {
 }
 
 .navbar-brand {
-  font-family: "Pacifico", cursive;
+  font-family: "Fira Sans", sans-serif;
   color: #383754;
   font-size: 40px;
 }
@@ -335,7 +285,7 @@ textarea:focus {
   font-family: "Fira Sans", sans-serif;
   /* font-weight: bolder; */
   padding: 2% 0 0 8%;
-  color: #1d1c2e;
+  color: #4a4969;
 }
 .intro-txt-line-2 {
   color: #52525f;
@@ -376,16 +326,15 @@ textarea:focus {
 .twinbtns-pc {
   display: block;
 }
-/* ----------------------------------------   SECTION-2   -------------------------------------- */
 
-/* -----------------------------------    SECTION - 3   --------------------------------------- */
+/* -----------------------------------    SECTION - 2   --------------------------------------- */
 
-.section3,
-.section4 {
+.section2,
+.section3 {
   position: relative;
 }
 
-.section3 {
+.section2 {
   margin-top: 300px;
 }
 .img-input-sec {
@@ -398,14 +347,17 @@ textarea:focus {
   padding: 10px;
 }
 
-.upload-img-div {
+/* .upload-img-div {
   text-align: right;
   margin-top: 15px;
   margin-right: 10px;
-}
+} */
 
 .upload-img {
-  height: 200px;
+  height: 120px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .img-input-sec h2 {
@@ -420,22 +372,49 @@ textarea:focus {
   border-radius: 40px;
 }
 
-.exp-btns-add {
-  position: absolute;
-  bottom: 3%;
-  right: 1%;
+.video-canvas {
+  text-align: center;
 }
-.exp-btns-add a {
-  margin-left: 5px;
+
+#user-input-img {
+  margin: 15px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 3px;
+}
+
+#snap-canvas {
+  margin: 15px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 3px;
+}
+.upload-btn-div {
+  text-align: center;
+}
+
+.custom-upload {
+  text-align: center;
+}
+
+#snap-img,
+#flip-button {
+  border: 3px solid;
+}
+
+.upload-btns-add {
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
 }
 
 .fa-whatsapp:hover {
   color: rgb(24, 173, 24);
 }
 
-/* ------------------------------------SECTION-4------------------------------------------------ */
+/* ------------------------------------SECTION-3------------------------------------------------ */
 
-.feedback-sec {
+.captioning-sec {
   background-color: #efeeee;
   border-radius: 15px;
   border: solid 1px rgb(207, 206, 206);
@@ -445,104 +424,24 @@ textarea:focus {
   padding: 10px;
 }
 
-.feedback-img {
-  position: absolute;
-  top: 5%;
-  right: 2%;
-  width: 400px;
-  height: 400px;
-}
-
-.improve-img {
-  position: absolute;
-  bottom: 3%;
-  left: 2%;
-  width: 200px;
-  height: 200px;
-}
-.feedback-appreciation {
-  position: absolute;
-  top: 40%;
-  left: 2%;
-  font-family: "Montserrat", sans-serif;
-  color: #50505e;
-}
-
-.feedback-sec-txt {
+.captioning-sec-txt {
   position: relative;
 }
 
-.feedback-sec-txt h2 {
+.captioning-sec-txt h2 {
   font-family: "Fira Sans", sans-serif;
   color: #383754;
   font-weight: bold;
   text-align: center;
 }
 
-.feedback-sec-txt h6 {
+.captioning-sec-txt h6 {
   font-family: "Montserrat", sans-serif;
   color: #6f6f72;
   text-align: center;
   font-weight: bold;
 }
 
-.thumbs-btn {
-  text-align: center;
-}
-.thumbs-btn button {
-  border-radius: 50%;
-  box-shadow: 10px 10px 16px -2px #ccc, -10px -10px 16px -2px #fff;
-  margin: 10px 50px;
-}
-
-.feedback-sec-txt input {
-  width: 250px;
-  border: solid 0.1px rgb(224, 224, 224);
-  outline: none;
-  display: block;
-  border-radius: 50px;
-  text-align: center;
-  padding: 0.6em;
-  margin: 0 auto;
-  background: #efeeee;
-  -webkit-appearance: none;
-  -moz-box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
-  -webkit-box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
-  box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
-  margin-bottom: 1em;
-  color: rgb(58, 56, 56);
-}
-.feedback-sec-txt textarea {
-  width: 250px;
-  border: solid 0.1px rgb(224, 224, 224);
-  outline: none;
-  display: block;
-  border-radius: 15px;
-  text-align: center;
-  padding: 0.6em;
-  margin: 0 auto;
-  background: #efeeee;
-  -webkit-appearance: none;
-  -moz-box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
-  -webkit-box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
-  box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
-  margin-bottom: 1em;
-  color: rgb(58, 56, 56);
-}
-
-.feedback-send {
-  text-align: right;
-}
-
-.feedback-send button {
-  border-radius: 40px;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  background-color: #d4edf5;
-}
 /* --------------------------------------------    FOOTER-SECTION ------------------------------- */
 
 .footer-sec {
@@ -552,24 +451,15 @@ textarea:focus {
   position: relative;
 }
 
-.foot-img {
-  margin: 35px 15px 35px 15px;
-  border: solid 3px #c2c0c0;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  display: inline-block;
-}
-
 .foot-content {
-  position: absolute;
-  top: 18px;
-  left: 125px;
+  padding: 15px;
 }
-.foot-content h6 {
+.foot-content h6,
+.guide-txt h6 {
   padding: 0;
   margin: 0;
   font-weight: normal;
+  color: #e9e8e8;
 }
 .foot-content p {
   padding: 0;
@@ -590,49 +480,37 @@ textarea:focus {
   color: #83d8f5;
 }
 
-.winner-img {
-  height: 170px;
-  width: 170px;
-  position: absolute;
-  top: 0px;
-  right: 43.5%;
-}
-
-.devices-img {
-  height: 150px;
-  width: 170px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
 .foot-logo-txt {
   position: absolute;
 }
 
-.winner-txt {
+.guide-txt {
   position: absolute;
-  font-family: "Pacifico", cursive;
-  color: #a0a0a0;
-  font-size: 21px;
-  bottom: 10px;
-  right: 44.6%;
+  top: -6px;
+  right: 20px;
+  text-align: right;
 }
 
-.devices-txt {
+.vit-logo {
+  position: absolute;
+  bottom: 35px;
+  right: 37.5%;
+}
+
+.vit-img {
+  border-radius: 5px;
+  height: 120px;
+}
+
+.capstone-txt {
   position: absolute;
   font-family: "Montserrat", sans-serif;
   color: #a0a0a0;
-  bottom: 20px;
-  right: 200px;
+  bottom: 5px;
+  right: 20px;
+  text-align: right;
 }
 
-.indian {
-  position: absolute;
-  left: 20px;
-  bottom: 0px;
-  font-size: smaller;
-  color: #afadad;
-}
 /* ---------------------------------------------MOBILE---------------------------------------- */
 
 @media screen and (max-width: 500px) {
@@ -643,7 +521,8 @@ textarea:focus {
 
   /* --------------------------------------SECTION-1-------------------------------------- */
   .navbar-brand {
-    font-size: 30px;
+    font-family: "Pacifico", cursive;
+    font-size: 21px;
   }
 
   .brand-logo {
@@ -651,30 +530,24 @@ textarea:focus {
   }
 
   .intro-img {
-    height: 700px;
-    width: 700px;
-    position: absolute;
-    top: 350px;
-    margin-top: -70px;
-    z-index: -1;
-    padding-left: 15%;
+    margin-top: 20px;
+    height: 150px;
   }
 
   .intro-text {
-    padding: 18% 20% 0 3%;
-    color: #1d1c2e;
+    padding: 3% 0 0 3%;
   }
 
   .add2home {
+    position: relative;
     font-family: "Montserrat", sans-serif;
     color: #383754;
-    padding-top: 40px;
-    padding-bottom: 100px;
+    bottom: -50px;
   }
+
   .add2home button {
     margin: 6px;
     border-radius: 60px;
-    display: block;
   }
 
   .twinbtns-pc {
@@ -685,250 +558,224 @@ textarea:focus {
   }
   /* ----------------------------------------   SECTION-2   ---------------------------------- */
 
-  /* -------------------------------------SECTION-3------------------------------------------- */
-
-  .explore-img {
-    padding-top: 70px;
+  .section2 {
+    margin-top: 120px;
   }
 
-  .explore-sec h1 {
-    position: absolute;
-    font-family: "Pacifico", cursive;
-    color: #383754;
-    top: 3%;
-    left: 8.5%;
-    text-align: center;
-    transform: rotate(-12deg);
-    font-size: 22px;
-    line-height: 1.5;
-  }
-
-  .exp-btns {
-    position: absolute;
-    top: 41%;
-    left: 1%;
-  }
-  .exp-btns button {
-    display: block;
-    margin: 10px 0 10px 3px;
-    border-radius: 40px;
-    width: 180px;
-  }
-
-  .exp-btns-add {
-    position: absolute;
-    bottom: 3%;
-    right: 4%;
-  }
-  /*---------------------------------FEEDBACK SECTION------------------------------------- */
-  .feedback-img,
-  .feedback-appreciation {
+  .upload-img {
     display: none;
   }
 
-  .improve-img {
-    position: absolute;
-    bottom: 0.5%;
-    left: 0%;
-    width: 150px;
-    height: 100px;
+  .img-input-sec h2 {
+    font-family: "Fira Sans", sans-serif;
+    color: #383754;
+    font-weight: bold;
+    text-align: center;
   }
+
+  .img-input-sec button {
+    margin: 20px;
+    border-radius: 40px;
+  }
+
+  .video-canvas {
+    text-align: center;
+  }
+
+  #user-input-img {
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 3px;
+  }
+
+  #snap-canvas {
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 3px;
+  }
+
+  .upload-btn-div {
+    text-align: center;
+  }
+
+  .custom-upload label,
+  .custom-upload input {
+    text-align: center;
+  }
+
+  input {
+    position: relative;
+    left: 14%;
+  }
+
+  .upload-btns-add {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+  }
+
+  .fa-whatsapp:hover {
+    color: rgb(24, 173, 24);
+  }
+
+  /* -------------------------------------SECTION-3------------------------------------------- */
 
   /* ---------------------------------------FOOTER-SECTION---------------------------------- */
 
-  .foot-img {
-    margin: 30px 15px 82px 15px;
-    border: solid 2px #efeeee;
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    display: inline-block;
+  .foot-logo-txt {
+    position: relative;
   }
 
-  .winner-img,
-  .devices-txt,
-  .devices-img {
-    display: none;
+  .foot-content {
+    text-align: center;
   }
 
-  .winner-txt {
-    position: absolute;
-    font-family: "Pacifico", cursive;
+  .guide-txt {
+    position: relative;
+    color: #c9c1c1;
+    top: 0px;
+    right: 0px;
+    text-align: center;
+  }
+
+  .vit-logo {
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+  }
+
+  .vit-img {
+    border-radius: 5px;
+    height: 90px;
+  }
+
+  .capstone-txt {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
     color: #a0a0a0;
-    font-size: 15px;
-    bottom: 7px;
-    right: 5px;
-  }
-
-  .indian {
-    position: absolute;
-    left: 18px;
-    bottom: 40px;
-    font-size: smaller;
-    color: #afadad;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
   }
 }
+
 /* ------------------------------------    TABLET     -------------------------------------------- */
 @media screen and (min-width: 500px) and (max-width: 750px) {
-  /* -----------------------------------SECTION -1 ------------------------------------------- */
-  .brand-logo {
-    display: none;
+  /* --------------------------------------SECTION-1-------------------------------------- */
+
+  /* --------------------------------------SECTION-1-------------------------------------- */
+  .navbar-brand {
+    font-size: 35px;
   }
+
+  /* .brand-logo {
+    
+  } */
 
   .intro-img {
-    height: 850px;
-    width: 850px;
-    position: absolute;
-    left: 30%;
-    top: 350px;
-    margin-top: -70px;
-    z-index: -1;
+    margin-top: 20px;
+    height: 200px;
   }
 
-  /* -----------------------------------SECTION-2-------------------------------------------- */
-
-  /* ----------------------------------------SECTION-3----------------------------------------- */
-
-  .explore-sec h1 {
-    top: 35%;
-    right: 2%;
+  .intro-text {
+    padding: 3% 0 0 3%;
   }
 
-  .exp-btns {
-    position: absolute;
-    top: 32%;
-    left: 10%;
-  }
-  .exp-btns button {
-    display: block;
-    margin: 10px 0 10px 3px;
-    border-radius: 40px;
-    width: 200px;
-  }
-
-  .exp-btns-add {
-    position: absolute;
-    bottom: 3%;
-    right: 2.5%;
-  }
-
-  /*---------------------------------FEEDBACK SECTION------------------------------------- */
-  .feedback-img,
-  .feedback-appreciation {
-    display: none;
-  }
-
-  .improve-img {
-    position: absolute;
-    bottom: 0.5%;
-    left: 0%;
-    width: 150px;
-    height: 100px;
-  }
-  /* ------------------------------------------ FOOTER-SECTION  ----------------------------- */
-  .winner-img {
-    height: 140px;
-    width: 140px;
-    position: absolute;
-    top: 0px;
-    right: 10px;
-  }
-
-  .winner-txt {
-    position: absolute;
-    font-family: "Pacifico", cursive;
-    color: #a0a0a0;
-    font-size: 25px;
-    bottom: 15px;
-    right: 6px;
-  }
-  .devices-img {
-    display: none;
-  }
-
-  .devices-txt {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 750px) and (max-width: 1024px) {
-  /* -----------------------------------SECTION -1 ------------------------------------------- */
-  .intro-img {
-    height: 850px;
-    width: 850px;
-    position: absolute;
-    left: 30%;
-    top: 350px;
-    margin-top: -70px;
-    z-index: -1;
-  }
-
-  /* -----------------------------------SECTION-2-------------------------------------------- */
-
-  /* ----------------------------------------SECTION-3----------------------------------------- */
-
-  .explore-sec h1 {
-    top: 35%;
-    right: 2%;
-  }
-
-  .exp-btns {
-    position: absolute;
-    top: 32%;
-    left: 10%;
-  }
-  .exp-btns button {
-    display: block;
-    margin: 10px 0 10px 3px;
-    border-radius: 40px;
-    width: 200px;
-  }
-
-  .exp-btns-add {
-    position: absolute;
-    bottom: 3%;
-    right: 2.5%;
-  }
-
-  /* --------------------------------------------FEEDBACK-SECTION------------------------------- */
-  .feedback-img {
-    position: absolute;
-    top: 5%;
-    right: 1%;
-    width: 230px;
-    height: 230px;
-  }
-  .feedback-appreciation {
-    position: absolute;
-    top: 40%;
-    left: 1%;
+  .add2home {
+    position: relative;
     font-family: "Montserrat", sans-serif;
-    color: #50505e;
-    font-size: 23px;
+    color: #383754;
+    bottom: -50px;
   }
 
-  /* ------------------------------------------ FOOTER-SECTION  ----------------------------- */
-  .winner-img {
-    height: 140px;
-    width: 140px;
-    position: absolute;
-    top: 0px;
-    right: 10px;
+  .add2home button {
+    margin: 6px;
+    border-radius: 60px;
   }
 
-  .winner-txt {
-    position: absolute;
-    font-family: "Pacifico", cursive;
-    color: #a0a0a0;
-    font-size: 25px;
-    bottom: 15px;
-    right: 6px;
-  }
-  .devices-img {
+  .twinbtns-pc {
     display: none;
   }
+  .twinbtns-mob {
+    display: block;
+  }
 
-  .devices-txt {
-    display: none;
+  /* ----------------------------------------   SECTION-2   ---------------------------------- */
+
+  .section2 {
+    margin-top: 120px;
+  }
+
+  .upload-img {
+    height: 90px;
+  }
+
+  .img-input-sec h2 {
+    font-family: "Fira Sans", sans-serif;
+    color: #383754;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .img-input-sec button {
+    margin: 20px;
+    border-radius: 40px;
+  }
+
+  .video-canvas {
+    text-align: center;
+  }
+
+  #user-input-img {
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 3px;
+  }
+
+  #snap-canvas {
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 3px;
+  }
+
+  .upload-btn-div {
+    text-align: center;
+  }
+
+  .custom-upload label,
+  .custom-upload input {
+    text-align: center;
+  }
+
+  .upload-btns-add {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+  }
+
+  .fa-whatsapp:hover {
+    color: rgb(24, 173, 24);
+  }
+
+  /* -------------------------------------SECTION-3------------------------------------------- */
+
+  /* ---------------------------------------FOOTER-SECTION---------------------------------- */
+
+  .vit-logo {
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    text-align: left;
+    margin-left: 15px;
+  }
+
+  .vit-img {
+    border-radius: 5px;
+    height: 90px;
   }
 }

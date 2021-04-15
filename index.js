@@ -1,22 +1,7 @@
-//------------------------Sweet Alert CDN insertion ----------------------------------------------
-var jQueryScript = document.createElement("script");
-jQueryScript.setAttribute(
-  "src",
-  "https://unpkg.com/sweetalert/dist/sweetalert.min.js"
-);
-document.head.appendChild(jQueryScript);
-
 //---------------------------loading ----------------------------------------
 
 function loadfunc() {
   var h = document.getElementById("loading");
-  h.style.display = "none";
-}
-
-//---------------------------new year----------------------------------------
-
-function closenewyear() {
-  var h = document.getElementById("new-year");
   h.style.display = "none";
 }
 
@@ -148,15 +133,15 @@ function flipcamera() {
 var constraints = {
   audio: false,
   video: {
-    width: 400,
-    height: 400,
-    facingMode: front ? "user" : "environment",
+    width: 300,
+    height: 300,
   },
 };
 
 navigator.mediaDevices
   .getUserMedia(constraints)
   .then(function (mediaStream) {
+    constraints.video = { facingMode: front ? "user" : "environment" };
     video = document.querySelector("#user-input-img");
     video.srcObject = mediaStream;
     video.onloadedmetadata = function (e) {
@@ -170,5 +155,5 @@ navigator.mediaDevices
 var canvas = document.getElementById("snap-canvas");
 var context = canvas.getContext("2d");
 snap.addEventListener("click", function () {
-  context.drawImage(video, 0, 0, 400, 400);
+  context.drawImage(video, 0, 0, 300, 300);
 });
