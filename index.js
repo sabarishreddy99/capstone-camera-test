@@ -126,33 +126,32 @@ var snap = document.getElementById("snap-img");
 
 var front = true;
 
-function flipcamera() {
-  front = !front;
-}
-
 var constraints = {
   audio: false,
   video: {
     width: 300,
     height: 300,
-    facingMode: {
-      exact: front ? "user" : "environment",
-    },
+    facingMode: "user",
   },
 };
 
-navigator.mediaDevices
-  .getUserMedia(constraints)
-  .then(function (mediaStream) {
-    video = document.querySelector("#user-input-img");
-    video.srcObject = mediaStream;
-    video.onloadedmetadata = function (e) {
-      video.play();
-    };
-  })
-  .catch(function (err) {
-    console.log(err.name + ": " + err.message);
-  }); // always check for errors at the end.
+function flipcamera() {
+  front = !front;
+  if (front == false) constraints.video.facingMode = "environment";
+  if (front == true) constraints.video.facingMode = "user";
+  navigator.mediaDevices
+    .getUserMedia(constraints)
+    .then(function (mediaStream) {
+      video = document.querySelector("#user-input-img");
+      video.srcObject = mediaStream;
+      video.onloadedmetadata = function (e) {
+        video.play();
+      };
+    })
+    .catch(function (err) {
+      console.log(err.name + ": " + err.message);
+    }); // always check for errors at the end.
+}
 
 var canvas = document.getElementById("snap-canvas");
 var context = canvas.getContext("2d");
